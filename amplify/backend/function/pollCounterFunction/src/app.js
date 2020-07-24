@@ -190,7 +190,7 @@ app.post(path, function (req, res) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
 
-  const UpdateAttribute = req.query['vote'] === 'no' ? 'votesNo' : 'votesYes'
+  const UpdateAttribute = req.query['vote'] === 'no' ? 'voteNo' : 'voteYes'
 
   //let putItemParams = {
   //  TableName: tableName,

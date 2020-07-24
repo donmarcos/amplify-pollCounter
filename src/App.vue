@@ -42,13 +42,13 @@ export default {
         },
       }
       const response = await API.post(this.apiName, "/votes", init)
-      if (vote === "yes") this.votesYes = response.data.Attributes.votesYes
-      if (vote === "no") this.votesNo = response.data.Attributes.votesNo
+      if (vote === "yes") this.votesYes = response.data.Attributes.voteYes
+      if (vote === "no") this.votesNo = response.data.Attributes.voteNo
     },
     updateVotes: async function() {
       const response = await API.get(this.apiName, "/votes/poll-001")
-      this.votesNo = response[0].votesNo
-      this.votesYes = response[0].votesYes
+      this.votesNo = response[0].voteNo
+      this.votesYes = response[0].voteYes
     },
   },
   created() {

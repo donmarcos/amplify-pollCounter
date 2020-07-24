@@ -209,7 +209,8 @@ app.post(path, function (req, res) {
     },
     ReturnValues: "UPDATED_NEW"
   }
-  console.log(updateItemParams);
+
+  res.json(updateItemParams);
 
   dynamodb.update(updateItemParams, (err, data) => {
     if (err) {
@@ -217,8 +218,7 @@ app.post(path, function (req, res) {
       res.json({
         error: err,
         url: req.url,
-        body: req.body,
-        updateItemParams
+        body: req.body
       });
     } else {
       res.json({

@@ -218,7 +218,7 @@ app.post(path, function (req, res) {
       res.json({
         error: err,
         url: req.url,
-        body: req.body
+        body: updateItemParams
       });
     } else {
       res.json({

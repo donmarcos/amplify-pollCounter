@@ -47,13 +47,13 @@ export default {
     },
     updateVotes: async function() {
       const response = await API.get(this.apiName, "/votes/poll-001")
-      this.votesNo = response[0].voteNo
-      this.votesYes = response[0].voteYes
+      this.votesNo = response[0].votesNo
+      this.votesYes = response[0].votesYes
     },
   },
   created() {
     this.updateVotes()
-    setInterval(this.updateVotes, 3000)
+    setInterval(this.updateVotes, 5000)
   },
 }
 </script>

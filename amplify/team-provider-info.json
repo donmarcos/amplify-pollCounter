@@ -1,15 +1,15 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-pollcounter-dev-215541-authRole",
-            "UnauthRoleArn": "arn:aws:iam::181571321432:role/amplify-pollcounter-dev-215541-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::181571321432:role/amplify-pollcounter-dev-215541-authRole",
+            "AuthRoleName": "amplify-pollcounter-dev-145642-authRole",
+            "UnauthRoleArn": "arn:aws:iam::181571321432:role/amplify-pollcounter-dev-145642-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::181571321432:role/amplify-pollcounter-dev-145642-authRole",
             "Region": "us-west-2",
-            "DeploymentBucketName": "amplify-pollcounter-dev-215541-deployment",
-            "UnauthRoleName": "amplify-pollcounter-dev-215541-unauthRole",
-            "StackName": "amplify-pollcounter-dev-215541",
-            "StackId": "arn:aws:cloudformation:us-west-2:181571321432:stack/amplify-pollcounter-dev-215541/c4699970-cca0-11ea-92e1-0aaf12ba6aa0",
-            "AmplifyAppId": "d12efc8w2vwb53"
+            "DeploymentBucketName": "amplify-pollcounter-dev-145642-deployment",
+            "UnauthRoleName": "amplify-pollcounter-dev-145642-unauthRole",
+            "StackName": "amplify-pollcounter-dev-145642",
+            "StackId": "arn:aws:cloudformation:us-west-2:181571321432:stack/amplify-pollcounter-dev-145642/ba4d2790-cec1-11ea-8f01-06c1882c17fc",
+            "AmplifyAppId": "d2j4xq2ggb5twh"
         }
     }
 }

@@ -18,8 +18,8 @@
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-pollcounter-dev-215541-authRole",
-        "unAuthRoleName": "amplify-pollcounter-dev-215541-unauthRole"
+        "authRoleName": "amplify-pollcounter-dev-145642-authRole",
+        "unAuthRoleName": "amplify-pollcounter-dev-145642-unauthRole"
     },
     "dependsOn": [
         {

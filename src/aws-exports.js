@@ -13,7 +13,7 @@ const awsmobile = {
     "aws_cloud_logic_custom": [
         {
             "name": "pollCounterAPI",
-            "endpoint": "https://xkqkizd3zb.execute-api.us-west-2.amazonaws.com/dev",
+            "endpoint": "https://flzwiwtgu2.execute-api.us-west-2.amazonaws.com/dev",
             "region": "us-west-2"
         }
     ]

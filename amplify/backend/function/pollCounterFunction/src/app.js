@@ -7,7 +7,7 @@ See the License for the specific language governing permissions and limitations 
 */
 
 
-
+console.log("***** START pollCounter *****")
 const AWS = require('aws-sdk')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 var bodyParser = require('body-parser')
@@ -61,6 +61,9 @@ const convertUrlType = (param, type) => {
  ********************************/
 
 app.get(path + hashKeyPath, function (req, res) {
+
+  console.log("***** GET  pollCounter *****")
+
   var condition = {}
   condition[partitionKeyName] = {
     ComparisonOperator: 'EQ'
@@ -186,6 +189,8 @@ app.put(path, function (req, res) {
 
 app.post(path, function (req, res) {
 
+  console.log("***** POST  pollCounter *****")
+
   if (userIdPresent) {
     req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
   }
@@ -210,7 +215,10 @@ app.post(path, function (req, res) {
     ReturnValues: "UPDATED_NEW"
   }
 
-  res.json(updateItemParams);
+  console.log("***** POST updateItemParams *****")
+  console.log(updateItemParams);
+  console.log("*****   *****")
+  console.log("*****  *****")
 
   dynamodb.update(updateItemParams, (err, data) => {
     if (err) {

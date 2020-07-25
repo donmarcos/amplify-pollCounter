@@ -104,6 +104,7 @@ app.get(path + hashKeyPath, function (req, res) {
  *****************************************/
 
 app.get(path + '/object' + hashKeyPath + sortKeyPath, function (req, res) {
+  console.log("***** GET  pollCounter object *****")
   var params = {};
   if (userIdPresent && req.apiGateway) {
     params[partitionKeyName] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;

@@ -161,25 +161,10 @@ app.post(path, function (req, res) {
 
   console.log("***** POST  pollCounter *****")
 
-  if (userIdPresent) {
-    req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
-  }
 
-  let updateItemParams = {
-    TableName: tableName,
-    Key: {
-      partitionKey: 'poll-001',
-      sortKey: 'total'
-    },
-    UpdateExpression: `set ${UpdateAttribute} = ${UpdateAttribute} + :val`,
-    ExpressionAttributeValues: {
-      ":val": 1
-    },
-    ReturnValues: "UPDATED_NEW"
-  }
 
   console.log("***** POST updateItemParams *****")
-  console.log(updateItemParams);
+  // console.log(updateItemParams);
   console.info("***** INFO Log  *****")
   console.warm("***** WARM log  *****")
 

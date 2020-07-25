@@ -215,10 +215,18 @@ app.post(path, function (req, res) {
     ReturnValues: "UPDATED_NEW"
   }
 
-  console.log("***** POST updateItemParams *****")
-  console.log(updateItemParams);
-  console.log("*****   *****")
-  console.log("*****  *****")
+  exports.handler = async function (event, context, updateItemParams) {
+    //console.log("ENVIRONMENT VARIABLES\n" + JSON.stringify(process.env, null, 2))
+    //console.info("EVENT\n" + JSON.stringify(event, null, 2))
+    //console.warn("Event not processed.")
+
+    console.log("***** POST updateItemParams *****")
+    console.log(updateItemParams);
+    console.info("***** INFO Log  *****")
+    console.warm("***** WARM log  *****")
+    return context.logStreamName
+  }
+
 
   dynamodb.update(updateItemParams, (err, data) => {
     if (err) {

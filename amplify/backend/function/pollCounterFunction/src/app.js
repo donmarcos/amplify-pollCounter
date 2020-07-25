@@ -7,7 +7,7 @@ See the License for the specific language governing permissions and limitations 
 */
 
 
-console.log("***** START pollCounter *****")
+
 const AWS = require('aws-sdk')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 var bodyParser = require('body-parser')
@@ -178,80 +178,12 @@ app.post(path, function (req, res) {
 
 });
 
-/*
-app.postx(path, function (req, res) {
-
-  console.log("***** POST  pollCounter *****")
-
-  if (userIdPresent) {
-    req.body['userId'] = req.apiGateway.event.requestContext.identity.cognitoIdentityId || UNAUTH;
-  }
-
-  const UpdateAttribute = req.query['vote'] === 'no' ? 'voteNo' : 'voteYes'
-
-  //let putItemParams = {
-  //  TableName: tableName,
-  //  Item: req.body
-  // }
-
-  let updateItemParams = {
-    TableName: tableName,
-    Key: {
-      partitionKey: 'poll-001',
-      sortKey: 'total'
-    },
-    UpdateExpression: `set ${UpdateAttribute} = ${UpdateAttribute} + :val`,
-    ExpressionAttributeValues: {
-      ":val": 1
-    },
-    ReturnValues: "UPDATED_NEW"
-  }
-
-
-
-  console.log("***** POST updateItemParams *****")
-  console.log(updateItemParams);
-  console.info("***** INFO Log  *****")
-  console.warm("***** WARM log  *****")
-
-
-
-  dynamodb.update(updateItemParams, (err, data) => {
-    if (err) {
-      res.statusCode = 500;
-      console.log('****** ERRROR here *******')
-      res.json({
-        error: err,
-        url: req.url,
-        body: updateItemParams
-      });
-    } else {
-      res.json({
-        success: 'post call succeed!',
-        url: req.url,
-        data: data
-      })
-    }
-  })
-
-  
-  dynamodb.put(putItemParams, (err, data) => {
-    if(err) {
-      res.statusCode = 500;
-      res.json({error: err, url: req.url, body: req.body});
-    } else{
-      res.json({success: 'post call succeed!', url: req.url, data: data})
-    }
-  });
-  
-
-});
-*/
 
 
 
 app.listen(3000, function () {
-  console.log("App started")
+  console.log("App started Marcos ")
+  console.log("***** START pollCounter *****")
 });
 
 // Export the app object. When executing the application local this does nothing. However,

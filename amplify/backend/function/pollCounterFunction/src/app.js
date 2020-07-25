@@ -187,7 +187,7 @@ app.put(path, function (req, res) {
  * HTTP post method for insert object *
  *************************************/
 
-app.postx(path, function (req, res) {
+app.post(path, function (req, res) {
 
   console.log("***** POST  pollCounter *****")
 

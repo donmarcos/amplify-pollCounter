@@ -212,7 +212,7 @@ app.post(path, function (req, res) {
   console.log('******* Update Item Params  *******')
 
 
-  dynamodb.put(UpdateAttribute, (err, data) => {
+  dynamodb.put(updateItemParams, (err, data) => {
     if (err) {
       res.statusCode = 500;
       res.json({

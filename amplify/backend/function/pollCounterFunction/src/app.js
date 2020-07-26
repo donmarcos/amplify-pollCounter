@@ -193,6 +193,7 @@ app.post(path, function (req, res) {
   }
 
   const UpdateAttribute = req.query['vote'] === 'no' ? 'votesNo' : 'votesYes'
+
   let updateItemParams = {
     TableName: tableName,
     Key: {
@@ -205,6 +206,10 @@ app.post(path, function (req, res) {
     },
     ReturnValues: "UPDATED_NEW"
   }
+
+  console.log('******* Update Item Params  *******')
+  console.log(updateItemParams)
+  console.log('******* Update Item Params  *******')
 
 
   dynamodb.put(UpdateAttribute, (err, data) => {
